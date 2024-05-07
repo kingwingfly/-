@@ -21,7 +21,7 @@ jobs:
       - name: Install pandoc
         run: |
           sudo apt-get update
-          sudo apt-get install pandoc
+          sudo apt-get install pandoc pdflatex
 
       - name: Convert to PDF
         run: |
