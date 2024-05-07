@@ -8,8 +8,8 @@ on:
       - dev
     # Paths can be used to only trigger actions when you have edited certain files, such as a file within the /docs directory
     paths:
-      - "docs/**.md"
-      - "docs/assets/**"
+      - "**.md"
+      - "assets/**"
 
 jobs:
   converttopdf:
@@ -21,13 +21,18 @@ jobs:
       - name: Install pandoc
         run: |
           sudo apt-get update
-          sudo apt-get install pandoc texlive-fonts-recommended texlive-fonts-extra texlive-latex-base texlive-latex-extra
+          sudo apt install \
+              pandoc \
+              texlive-latex-base \
+              texlive-fonts-recommended \
+              texlive-extra-utils \
+              texlive-latex-extra \
+              texlive-xetex
 
       - name: Convert to PDF
         run: |
           mkdir pdfs
-          mv docs/assets .
-          pandoc docs/homework1.md -o pdfs/homework1.pdf
+          pandoc --pdf-engine=xelatex homework1.md -o pdfs/homework1.pdf
 
       - uses: actions/upload-artifact@v4
         with:
