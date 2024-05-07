@@ -21,11 +21,12 @@ jobs:
       - name: Install pandoc
         run: |
           sudo apt-get update
-          sudo apt-get install pandoc texlive-latex-base texlive-latex-extra
+          sudo apt-get install pandoc texlive-fonts-recommended texlive-fonts-extra texlive-latex-base texlive-latex-extra
 
       - name: Convert to PDF
         run: |
           mkdir pdfs
+          mv docs/assets .
           pandoc docs/homework1.md -o pdfs/homework1.pdf
 
       - uses: actions/upload-artifact@v4
