@@ -79,7 +79,7 @@
 记某人在第 n 次作业中的贡献权重为 $C_n$
 
 $$
-某人得分 = \frac {本组得分} {\sum_1^N {Wn}} \cdot \sum_1^N {( W_n\cdot C_n)}
+score = \frac {total score} {\sum_1^N {Wn}} \cdot \sum_1^N {( W_n\cdot C_n)}
 $$
 
 由于作业一工作较为简单，记本次作业权重为$1$，其余组员将在下次担任主力。
