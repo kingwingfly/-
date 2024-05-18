@@ -19,9 +19,8 @@ if __name__ == "__main__":
         # {"王翼翔": 0, "谭涵": 0, "伍洛欧": 0, "吴樱": 0, "杨宇轩": 0, "张蕴泽": 0, "李可馨": 0}
         {"王翼翔": 0.16, "谭涵": 0.16, "伍洛欧": 0.1, "吴樱": 0.16, "杨宇轩": 0.22, "张蕴泽": 0.1, "李可馨": 0.1}, # 作业1贡献权重
     ]
-    if verify_contribute(C):
-        print("Contribution Verified.")
-        for n, s in score(W, C).items():
-            print(f"{n}:\t {s:.2f}")
-    else:
+    if !verify_contribute(C):
         print("Invalid Contribution.")
+    print("Contribution Verified.")
+    for n, s in score(W, C).items():
+        print(f"{n}:\t {s:.2f}")
