@@ -1,6 +1,8 @@
 This repo is for cooperation of CQU's `Management Information System(MIS)` course.
 
 [homewok1](homework1.md)
+[homewok2](homework2.md)
+[homewok3](homework3.md)
 
 # score
 
