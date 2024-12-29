@@ -26,6 +26,7 @@ if __name__ == "__main__":
     ]
     if not verify_contribute(C):
         print("Invalid Contribution.")
+        return
     print("Contribution Verified.")
     for n, s in score(W, C).items():
         print(f"{n}:\t {s:.2f}")
