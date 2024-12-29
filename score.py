@@ -12,7 +12,7 @@ def verify_contribute(cs: list[dict[str, float]]) -> bool:
 def score(W: list[float], C: list[dict[str, float]]) -> dict[str, float]:
     return {m: TOTAL * sum(W[i] * c.get(m, 0) for i, c in enumerate(C)) for m in MEMBERS}
 
-if __name__ == "__main__":
+def main():
     W = normalize([
         1.5, # 第一次作业较简单，但由于创新了程序解，权重为 1 + 0.5
         2, # 第二次作业较困难，权重为 2
@@ -30,3 +30,7 @@ if __name__ == "__main__":
     print("Contribution Verified.")
     for n, s in score(W, C).items():
         print(f"{n}:\t {s:.2f}")
+        
+if __name__ == "__main__":
+    main()
+    
